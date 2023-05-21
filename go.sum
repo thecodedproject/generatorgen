@@ -22,6 +22,8 @@ github.com/thecodedproject/gopkg v0.0.0-20230319183607-6ddcb199822b h1:oI63Ym3+X
 github.com/thecodedproject/gopkg v0.0.0-20230319183607-6ddcb199822b/go.mod h1:/sxB16ElXIkPlI0614rTReD/ZsM+xQcypL4SEzh/h7E=
 github.com/thecodedproject/gopkg v0.0.0-20230521125602-b7b3079ba565 h1:7MnO5cAm7U4ugcy7MgOh31YHypLQ/TZh8znxTEOzHME=
 github.com/thecodedproject/gopkg v0.0.0-20230521125602-b7b3079ba565/go.mod h1:/sxB16ElXIkPlI0614rTReD/ZsM+xQcypL4SEzh/h7E=
+github.com/thecodedproject/gopkg v0.0.0-20230521134204-a3d5d0f7e86b h1:DQ2S9o3/mlJTLCTY5qp4D2J9EaZ96aLTFm6TaUUtZ3s=
+github.com/thecodedproject/gopkg v0.0.0-20230521134204-a3d5d0f7e86b/go.mod h1:/sxB16ElXIkPlI0614rTReD/ZsM+xQcypL4SEzh/h7E=
 gopkg.in/check.v1 v0.0.0-20161208181325-20d25e280405 h1:yhCVgyC4o1eVCa2tZl7eS0r+SDo693bJlVdllGtEeKM=
 gopkg.in/check.v1 v0.0.0-20161208181325-20d25e280405/go.mod h1:Co6ibVJAznAaIkqp8huTwlJQCZ016jof/cbN4VW5Yz0=
 gopkg.in/yaml.v3 v3.0.0-20200313102051-9f266ea9e77c/go.mod h1:K4uyk7z7BCEPqu6E+C64Yfv1cQ7kz7rIZviUmN+EgEM=

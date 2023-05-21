@@ -1,1 +1,4 @@
+examples/init_generator/internal/file_template.go
+examples/init_generator/internal/generate.go
+examples/init_generator/main.go
 examples/init_generator/main_test.go

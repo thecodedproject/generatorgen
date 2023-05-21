@@ -7,7 +7,7 @@ import (
 
 	//"github.com/iancoleman/strcase"
 	"github.com/thecodedproject/gopkg"
-	//"github.com/thecodedproject/gopkg/tmpl"
+	"github.com/thecodedproject/gopkg/tmpl"
 )
 
 var (
@@ -24,8 +24,11 @@ func Generate() error {
 	}
 
 	var files []gopkg.FileContents
-	files, err = appendFileContents(
+	files, err = tmpl.AppendFileContents(
 		files,
+		fileInternalFileTemplate(d),
+		fileInternalGenerate(d),
+		fileMain(d),
 		fileMainTest(d),
 	)
 	if err != nil {
@@ -35,25 +38,10 @@ func Generate() error {
 	return gopkg.LintAndGenerate(files)
 }
 
-func appendFileContents(
-	files []gopkg.FileContents,
-	fileFuncs ...func() ([]gopkg.FileContents, error),
-) ([]gopkg.FileContents, error) {
-
-	for _, fileFunc := range fileFuncs {
-		newFiles, err := fileFunc()
-		if err != nil {
-			return nil, err
-		}
-
-		files = append(files, newFiles...)
-	}
-	return files, nil
-}
-
 type generatorDef struct {
 	OutputPath string
 	Import gopkg.ImportAndAlias
+	InternalImport gopkg.ImportAndAlias
 }
 
 func createGeneratorDef() (generatorDef, error) {
@@ -70,6 +58,10 @@ func createGeneratorDef() (generatorDef, error) {
 		Import: gopkg.ImportAndAlias{
 			Import: importPath,
 			Alias: generatorName,
+		},
+		InternalImport: gopkg.ImportAndAlias{
+			Import: path.Join(importPath, "internal"),
+			Alias: "internal",
 		},
 	}, nil
 }
