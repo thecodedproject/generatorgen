@@ -1,1 +1,11 @@
-?   	github.com/thecodedproject/generatorgen/examples/init_generator	[no test files]
+=== RUN   TestGenerate
+    main_test.go:41: 
+        	Error Trace:	/Users/jonny/code/codedproject/generatorgen/examples/init_generator/main_test.go:41
+        	            				/Users/jonny/code/codedproject/generatorgen/examples/init_generator/main_test.go:17
+        	Error:      	Received unexpected error:
+        	            	open ./examples: no such file or directory
+        	Test:       	TestGenerate
+--- FAIL: TestGenerate (X.XXs)
+FAIL
+FAIL	github.com/thecodedproject/generatorgen/examples/init_generator	X.XXXs
+FAIL
