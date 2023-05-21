@@ -13,6 +13,10 @@ func fileInternalGenerate(
 
 	return func() ([]gopkg.FileContents, error) {
 
+		if d.GeneratorMainFileExists {
+			return nil, nil
+		}
+
 		imports := tmpl.UnnamedImports(
 			"flag",
 			"path",

@@ -1,11 +1,11 @@
 package internal
 
 import (
-	//"errors"
 	"flag"
 	"path"
+	"path/filepath"
+	"os"
 
-	//"github.com/iancoleman/strcase"
 	"github.com/thecodedproject/gopkg"
 	"github.com/thecodedproject/gopkg/tmpl"
 )
@@ -42,9 +42,15 @@ type generatorDef struct {
 	OutputPath string
 	Import gopkg.ImportAndAlias
 	InternalImport gopkg.ImportAndAlias
+	GeneratorMainFileExists bool
 }
 
 func createGeneratorDef() (generatorDef, error) {
+
+	var mainExists bool
+	if _, err := os.Stat(filepath.Join(*outputPath, "main.go")); err == nil {
+		mainExists = true
+	}
 
 	importPath, err := gopkg.PackageImportPath(*outputPath)
 	if err != nil {
@@ -63,5 +69,6 @@ func createGeneratorDef() (generatorDef, error) {
 			Import: path.Join(importPath, "internal"),
 			Alias: "internal",
 		},
+		GeneratorMainFileExists: mainExists,
 	}, nil
 }
