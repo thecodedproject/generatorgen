@@ -1,4 +1,4 @@
-package existing_generator
+package main
 
 import (
 	internal "github.com/thecodedproject/generatorgen/examples/existing_generator/internal"

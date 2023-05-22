@@ -31,8 +31,8 @@ func fileMainTest(
 		return []gopkg.FileContents{
 			{
 				Filepath: filepath.Join(d.OutputPath, "main_test.go"),
-				PackageName: d.Import.Alias,
-				PackageImportPath: d.Import.Import + "_test",
+				PackageName: "main_test",
+				PackageImportPath: d.Import.Import,
 
 				Imports: imports,
 

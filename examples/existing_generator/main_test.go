@@ -1,4 +1,4 @@
-package existing_generator
+package main_test
 
 import (
 	goldie "github.com/sebdah/goldie/v2"

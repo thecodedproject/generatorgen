@@ -1,3 +1,3 @@
-package existing_generator
+package main
 
 //go:generate go run ../../main.go

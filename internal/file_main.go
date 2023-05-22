@@ -25,7 +25,7 @@ func fileMain(
 		return []gopkg.FileContents{
 			{
 				Filepath: filepath.Join(d.OutputPath, "main.go"),
-				PackageName: d.Import.Alias,
+				PackageName: "main",
 				PackageImportPath: d.Import.Import,
 				Imports: imports,
 				Functions: []gopkg.DeclFunc{
